@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tela_adc_refeicao"
+    tools:context=".views.TelaAdcRefeicao">
+
+    <EditText
+        android:id="@+id/edtDescricaoRefeicao"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCaloriasRefeicao"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Calorias"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDescricaoRefeicao" />
+
+    <TextView
+        android:id="@+id/txtLocalizacaoRefeicao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="24dp"
+        android:text="Localização (opcional)"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCaloriasRefeicao" />
+
+    <EditText
+        android:id="@+id/edtLatitudeRefeicao"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Latitude"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocalizacaoRefeicao" />
+
+    <EditText
+        android:id="@+id/edtLongitudeRefeicao"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Longitude"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLatitudeRefeicao" />
+
+    <EditText
+        android:id="@+id/edtLocalRefeicao"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Nome do local"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLongitudeRefeicao" />
+
+    <Button
+        android:id="@+id/btnSalvarRefeicao"
+        android:layout_width="134dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="58dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:text="Salvar"
+        android:textColor="@color/vinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLocalRefeicao" />
+</androidx.constraintlayout.widget.ConstraintLayout>

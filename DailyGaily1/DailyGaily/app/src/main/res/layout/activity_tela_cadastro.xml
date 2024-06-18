@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cadastro"
+    tools:context=".views.TelaCadastro">
+
+    <EditText
+        android:id="@+id/edtNomeCadastro"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="412dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEmailCadastro"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeCadastro" />
+
+    <EditText
+        android:id="@+id/edtSenhaCadastro"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailCadastro" />
+
+    <TextView
+        android:id="@+id/txtTelaCadastro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:text="Já possui conta?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/vinho"
+        android:text="Login"
+        app:layout_constraintStart_toEndOf="@+id/txtTelaCadastro1"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="117dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:text="Registrar"
+        android:textColor="@color/vinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

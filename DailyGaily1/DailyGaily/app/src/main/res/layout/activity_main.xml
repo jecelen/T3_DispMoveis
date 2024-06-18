@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+
+    tools:context=".views.MainActivity">
+
+
+    <EditText
+        android:id="@+id/edtEmailLogin"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="435dp"
+        android:ems="10"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtSenhaLogin"
+        android:layout_width="247dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailLogin" />
+
+    <TextView
+        android:id="@+id/txtTelaLogin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="34dp"
+        android:text="Ainda não possui conta?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaLogin" />
+
+    <TextView
+        android:id="@+id/txtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="34dp"
+        android:text="Cadastre-se"
+        android:textColor="@color/vinho"
+        app:layout_constraintStart_toEndOf="@+id/txtTelaLogin1"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaLogin" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="117dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:text="Entrar"
+        android:textColor="@color/vinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelaLogin1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
