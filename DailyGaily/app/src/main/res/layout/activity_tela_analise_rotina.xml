@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.TelaAnaliseRotina" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tela_analise_rotina">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtAnaliseRotina1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="148dp"
+                android:text="Resumo Geral"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnSemanal"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E0F7AF"
+                android:text="Semanal"
+                android:textColor="@color/vinho"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseRotina1" />
+
+            <Button
+                android:id="@+id/btnMensal"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E5CDF8"
+                android:text="Mensal"
+                android:textColor="@color/vinho"
+                app:layout_constraintStart_toEndOf="@+id/btnSemanal"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseRotina1" />
+
+            <TextView
+                android:id="@+id/txtHorasResumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="188dp"
+                android:layout_marginTop="248dp"
+                android:text="00:00"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseRotina1" />
+
+            <TextView
+                android:id="@+id/txtConsumoResumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="192dp"
+                android:layout_marginTop="240dp"
+                android:text="0 L's"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHorasResumo" />
+
+            <TextView
+                android:id="@+id/txtRefeicaoResumo"
+                android:layout_width="18dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="756dp"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseRotina1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
