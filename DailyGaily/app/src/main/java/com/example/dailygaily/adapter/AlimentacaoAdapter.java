@@ -2,6 +2,7 @@ package com.example.dailygaily.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.dailygaily.R;
 import com.example.dailygaily.entities.Alimentacao;
-import com.example.dailygaily.views.TelaInicial;
+import com.example.dailygaily.views.MapaEndereco;
 
 import java.util.List;
 
@@ -46,13 +47,26 @@ public class AlimentacaoAdapter extends ArrayAdapter<Alimentacao> {
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navegar para o mapa
+                int id = currentItem.getAlimentacaoID();
+                String local = currentItem.getNomeDoLocal();
+                double lati = currentItem.getLatitude();
+                double longi = currentItem.getLongitude();
+                saveRestauranteToSharedPreferences(id, local, (float)lati, (float)longi);
                 Toast.makeText(context, "Abrindo mapa", Toast.LENGTH_SHORT).show();
-                Intent mapIntent = new Intent(context, TelaInicial.class);
+                Intent mapIntent = new Intent(context, MapaEndereco.class);
                 context.startActivity(mapIntent);
             }
         });
 
         return convertView;
+    }
+    private void saveRestauranteToSharedPreferences(int alimentacaoId, String local, float lati, float longi) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("Local", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("id", alimentacaoId);
+        editor.putString("local", local);
+        editor.putFloat("lati", lati);
+        editor.putFloat("lati", longi);
+        editor.apply();
     }
 }

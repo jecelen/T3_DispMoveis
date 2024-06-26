@@ -13,8 +13,11 @@
         android:theme="@style/Theme.DailyGaily"
         tools:targetApi="31">
         <activity
-            android:name=".views.TelaEdtAlimentacao"
+            android:name=".views.MapaEndereco"
             android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBbhLFAgK_sKLzdPycqlL9Q1vuejhw9DkE"/>
         <activity
             android:name=".views.TelaEdtExercicios"
             android:exported="false" />
@@ -28,7 +31,7 @@
             android:name=".views.TelaAnaliseRotina"
             android:exported="false" />
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.TelaAdcAgua"
             android:exported="false" />
         <activity
             android:name=".views.TelaConsumoAgua"
@@ -46,13 +49,13 @@
             android:name=".views.TelaHumor"
             android:exported="false" />
         <activity
-            android:name=".views.TelaInicial"
+            android:name=".views.MainActivity"
             android:exported="false" />
         <activity
             android:name=".views.TelaCadastro"
             android:exported="false" />
         <activity
-            android:name=".views.TelaAdcAgua"
+            android:name=".views.TelaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
