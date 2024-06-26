@@ -13,11 +13,13 @@
         android:id="@+id/edtEmailLogin"
         android:layout_width="246dp"
         android:layout_height="47dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="435dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="Digite seu email"
         android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,10 +28,12 @@
         android:layout_width="247dp"
         android:layout_height="45dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="Digite sua senha"
         android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEmailLogin" />
 
@@ -49,8 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="34dp"
+        android:layout_marginEnd="78dp"
         android:text="Cadastre-se"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtTelaLogin1"
         app:layout_constraintTop_toBottomOf="@+id/edtSenhaLogin" />
 
@@ -59,10 +65,12 @@
         android:layout_width="117dp"
         android:layout_height="49dp"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="144dp"
         android:backgroundTint="@color/laranjaClaro"
         android:text="Entrar"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTelaLogin1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
