@@ -68,7 +68,7 @@ public class TelaExercicios extends AppCompatActivity {
                 Exercicio exercicioSelecionado = exercicios.get(position);
                 int exercicioID = exercicioSelecionado.getExercicioID();
                 String tipoDeExercicio = exercicioSelecionado.getTipoDeExercicio();
-                saveEnderecoToSharedPreferences(exercicioID, tipoDeExercicio);
+                saveTipoExercicioToSharedPreferences(exercicioID, tipoDeExercicio);
                 edtIntent.putExtra("EXERCICIO_SELECIONADO_ID",
                         exercicioSelecionado.getExercicioID());
 
@@ -77,7 +77,7 @@ public class TelaExercicios extends AppCompatActivity {
         });
     }
 
-    private void saveEnderecoToSharedPreferences(int exercicioID, String tipoDeExercicio) {
+    private void saveTipoExercicioToSharedPreferences(int exercicioID, String tipoDeExercicio) {
         SharedPreferences sharedPreferences = getSharedPreferences("ExercicioPref", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("exercicioId", exercicioID);

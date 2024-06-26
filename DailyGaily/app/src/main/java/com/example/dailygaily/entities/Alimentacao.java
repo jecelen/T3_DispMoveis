@@ -81,4 +81,10 @@ public class Alimentacao {
     public void setUsuarioID(int usuarioID) {
         this.usuarioID = usuarioID;
     }
+
+    @Override
+    public String toString() {
+        return  descricao + '\n' +
+                calorias +" calorias";
+    }
 }
