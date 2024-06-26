@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.dailygaily.R;
@@ -20,6 +21,7 @@ public class TelaAdcRefeicao extends AppCompatActivity {
     private LocalDatabase db;
     private EditText edtDescricao, edtCalorias, edtLatitude, edtLongitude, edtNomeLocal;
     private Double calorias, lat, lon;
+    private ImageButton imgVoltar;
     private Button btnSalvarRefeicao;
     private SharedPreferences sharedPreferences;
     private int dbUsuarioId;
@@ -35,11 +37,20 @@ public class TelaAdcRefeicao extends AppCompatActivity {
         edtLongitude = findViewById(R.id.edtLongitudeRefeicao);
         edtNomeLocal = findViewById(R.id.edtLocalRefeicao);
         btnSalvarRefeicao = findViewById(R.id.btnSalvarRefeicao);
+        imgVoltar = findViewById(R.id.imgVoltar);
 
         btnSalvarRefeicao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 salvarRefeicao();
+            }
+        });
+
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(TelaAdcRefeicao.this, TelaAlimentacao.class);
+                startActivity(it);
             }
         });
     }

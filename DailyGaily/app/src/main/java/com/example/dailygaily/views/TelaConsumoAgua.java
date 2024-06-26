@@ -64,7 +64,7 @@ public class TelaConsumoAgua extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        totalagua.setText("Total Consumido: " + total + "ml");
+                        totalagua.setText(total + "ml");
                     }
                 });
             }
