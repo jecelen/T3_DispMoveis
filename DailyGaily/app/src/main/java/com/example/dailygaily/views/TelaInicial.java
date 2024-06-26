@@ -3,17 +3,25 @@ package com.example.dailygaily.views;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.dailygaily.R;
+import com.example.dailygaily.dao.UsuarioDao;
+import com.example.dailygaily.database.LocalDatabase;
+import com.example.dailygaily.entities.Usuario;
 
 public class TelaInicial extends AppCompatActivity {
 
     private Button btnExerciciosFisicos, btnHumorDiario, btnHabitosAlimentares, btnConsumoAgua, btnAnaliseRotina;
     private ImageButton btnConta;
+    private int dbUsuarioId;
+    private TextView txtNomeDoUsuario, txtTelaInicial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,14 @@ public class TelaInicial extends AppCompatActivity {
         btnConsumoAgua = findViewById(R.id.btnConsumoAgua);
         btnAnaliseRotina = findViewById(R.id.btnAnaliseRotina);
         btnConta = findViewById(R.id.btnConta);
+        txtNomeDoUsuario = findViewById(R.id.txtNomeUsuario);
+        txtTelaInicial = findViewById(R.id.txtTelaInicial1);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        dbUsuarioId = sharedPreferences.getInt("usuarioId", -1);
+
+        bemVindoUsuario();
+        Log.d("tag", "cheguei");
 
         btnHumorDiario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +77,7 @@ public class TelaInicial extends AppCompatActivity {
         btnAnaliseRotina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(TelaInicial.this, TelaAnaliseRotina.class);
+                Intent it = new Intent(TelaInicial.this, TelaTarefa.class);
                 startActivity(it);
             }
         });
@@ -74,4 +90,21 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
     }
+
+    private void bemVindoUsuario() {
+        if (dbUsuarioId != -1) {
+            // Obtém o nome do usuário logado no banco de dados
+            LocalDatabase db = LocalDatabase.getDatabase(this);
+            assert db != null;
+            UsuarioDao usuarioDao = db.usuarioModel();
+            Usuario usuario = usuarioDao.getUsuario(dbUsuarioId);
+            Log.d("ch", "aqui");
+
+            if (usuario != null) {
+                String nomeUsuario = usuario.getNome();
+                txtNomeDoUsuario.setText(nomeUsuario);
+            }
+        }
+    }
+
 }
