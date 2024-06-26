@@ -28,7 +28,7 @@
             android:name=".views.TelaAnaliseRotina"
             android:exported="false" />
         <activity
-            android:name=".views.TelaAdcAgua"
+            android:name=".views.MainActivity"
             android:exported="false" />
         <activity
             android:name=".views.TelaConsumoAgua"
@@ -52,7 +52,7 @@
             android:name=".views.TelaCadastro"
             android:exported="false" />
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.TelaAdcAgua"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

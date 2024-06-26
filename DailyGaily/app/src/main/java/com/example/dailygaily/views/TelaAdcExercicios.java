@@ -38,6 +38,7 @@ public class TelaAdcExercicios extends AppCompatActivity {
         Log.d("Ch", "Cheguei aqui");
         setContentView(R.layout.activity_tela_adc_exercicios);
         db = LocalDatabase.getDatabase(getApplicationContext());
+
         edtTipoExercicio = findViewById(R.id.edtTipoExercicio);
         edtTempoExercicio = findViewById(R.id.edtTempoExercicio);
         edtLatitude = findViewById(R.id.edtLatitudeExercicios);
