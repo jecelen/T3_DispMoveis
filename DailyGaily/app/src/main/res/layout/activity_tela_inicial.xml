@@ -15,7 +15,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="72dp"
         android:backgroundTint="#E5CDF8"
-        android:text="Análise de rotina"
+        android:text="Tarefa"
         android:textColor="@color/vinho"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,9 +81,10 @@
         android:id="@+id/txtNomeUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="4dp"
-        android:text="nomeDoUsuario"
+
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="1dp"
+
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,14 +103,14 @@
 
     <ImageButton
         android:id="@+id/btnConta"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="#80ADDDE3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+
+        android:layout_width="63dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="332dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+
+        
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/account" />
