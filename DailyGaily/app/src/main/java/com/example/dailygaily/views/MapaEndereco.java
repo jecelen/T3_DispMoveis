@@ -85,29 +85,4 @@ public class MapaEndereco extends FragmentActivity implements OnMapReadyCallback
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
     }
 
-//    private LatLng obterLocalizacao() {
-//        sharedPreferences = getSharedPreferences("Local", MODE_PRIVATE);
-//        alimentacaoId = sharedPreferences.getInt("id", -1);
-//
-//        AlimentacaoDao alimentacaoDao = LocalDatabase.getDatabase(this).alimentacaoModel();
-//        Alimentacao alimentacao = alimentacaoDao.getAlimentacao(alimentacaoId);
-//
-//        // Debug print
-//        Log.d(TAG, "Exercício: " + alimentacao);
-//
-//        if (alimentacao != null) {
-//            longi = alimentacao.getLongitude();
-//            lati = alimentacao.getLatitude();
-//            endMarcado = alimentacao.getNomeDoLocal();
-//
-//            // Debug prints for latitude and longitude
-//            Log.d(TAG, "Longitude: " + longi);
-//            Log.d(TAG, "Latitude: " + lati);
-//
-//            return new LatLng(lati, longi);
-//        } else {
-//            Toast.makeText(this, "Erro: endereço não encontrado", Toast.LENGTH_SHORT).show();
-//            return null;
-//        }
-//    }
 }
