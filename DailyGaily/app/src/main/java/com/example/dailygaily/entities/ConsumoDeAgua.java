@@ -8,21 +8,20 @@ import com.example.dailygaily.dao.ConsumoDeAguaDao;
 
 import java.sql.Time;
 
-@Entity(foreignKeys = @ForeignKey(entity = Usuario.class,
-        parentColumns = "usuarioID", childColumns = "usuarioID",
-        onDelete = ForeignKey.CASCADE))
+@Entity
 public class ConsumoDeAgua {
     @PrimaryKey(autoGenerate = true)
     private int consumoID;
-    private Double mlConsumido;
-    private int usuarioID;
+    private int mlConsumido;
+    private String date;
+    private String horario;
 
-    public ConsumoDeAgua(){}
 
-    public ConsumoDeAgua(Double mlConsumido){
-        this.mlConsumido = mlConsumido;
-    }
+    public ConsumoDeAgua(){
+    };
 
+
+    // Getters e Setters
     public int getConsumoID() {
         return consumoID;
     }
@@ -30,20 +29,25 @@ public class ConsumoDeAgua {
     public void setConsumoID(int consumoID) {
         this.consumoID = consumoID;
     }
+    public String getHorario() {
+        return horario;
+    }
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
 
-    public Double getMlConsumido() {
+    public int getMlConsumido() {
         return mlConsumido;
     }
 
-    public void setMlConsumido(Double mlConsumido) {
+    public void setMlConsumido(int mlConsumido) {
         this.mlConsumido = mlConsumido;
     }
 
-    public int getUsuarioID() {
-        return usuarioID;
-    }
-
-    public void setUsuarioID(int usuarioID) {
-        this.usuarioID = usuarioID;
-    }
 }

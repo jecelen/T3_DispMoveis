@@ -17,14 +17,17 @@ import com.example.dailygaily.entities.Exercicio;
 import com.example.dailygaily.entities.Humor;
 import com.example.dailygaily.entities.Usuario;
 
-@Database(entities = {Usuario.class, Exercicio.class, Alimentacao.class, Humor.class, ConsumoDeAgua.class}, version = 5)
+@Database(entities = {Usuario.class, Exercicio.class, Alimentacao.class, Humor.class, ConsumoDeAgua.class}, version = 6)
 public abstract class LocalDatabase extends RoomDatabase {
     private static LocalDatabase INSTANCE;
 
     public static LocalDatabase getDatabase(Context context) {
         if (INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                    LocalDatabase.class, "ControleUsuario").allowMainThreadQueries().build();
+                            LocalDatabase.class, "ControleUsuario")
+                    .fallbackToDestructiveMigration() // Permitir migrações destrutivas
+                    .allowMainThreadQueries()
+                    .build();
         }
         return INSTANCE;
     }
@@ -34,5 +37,4 @@ public abstract class LocalDatabase extends RoomDatabase {
     public abstract ConsumoDeAguaDao consumoModel();
     public abstract ExercicioDao exercicioModel();
     public abstract HumorDao humorModel();
-
 }

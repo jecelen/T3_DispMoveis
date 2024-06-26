@@ -13,6 +13,8 @@ import java.util.List;
 @Dao
 public interface ConsumoDeAguaDao {
 
+
+
     @Query("SELECT * FROM ConsumoDeAgua WHERE consumoID = :idCon LIMIT 1")
     ConsumoDeAgua getConsumo(int idCon);
 
@@ -27,4 +29,7 @@ public interface ConsumoDeAguaDao {
 
     @Delete
     void delete(ConsumoDeAgua consumo);
+
+    @Query("SELECT SUM(mlConsumido) FROM ConsumoDeAgua")
+    int getTotalConsumption();
 }
