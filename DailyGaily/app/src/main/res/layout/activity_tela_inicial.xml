@@ -12,90 +12,104 @@
         android:layout_width="264dp"
         android:layout_height="74dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="72dp"
         android:backgroundTint="#E5CDF8"
         android:text="Análise de rotina"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHumorDiario" />
-
-    <Button
-        android:id="@+id/btnHumorDiario"
-        android:layout_width="264dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="34dp"
-        android:backgroundTint="#FAFFC2"
-        android:text="Humor diário"
-        android:textColor="@color/vinho"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsumoAgua" />
-
-    <Button
-        android:id="@+id/btnConsumoAgua"
-        android:layout_width="264dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="33dp"
-        android:backgroundTint="@color/azulClaro"
-        android:text="Consumo de água"
-        android:textColor="@color/vinho"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHabitosAlimentares" />
 
     <Button
         android:id="@+id/btnHabitosAlimentares"
         android:layout_width="264dp"
         android:layout_height="74dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="72dp"
         android:backgroundTint="#CFE3A1"
         android:text="Hábitos alimentares"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnExerciciosFisicos" />
 
-    <TextView
-        android:id="@+id/txtTelaInicial1"
-        android:layout_width="274dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="156dp"
-        android:text="Bem vindo ao Daliy Gaily,"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/btnExerciciosFisicos"
+        android:layout_width="264dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:text="Exercícios físicos"
+        android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeUsuario" />
+
+    <Button
+        android:id="@+id/btnConsumoAgua"
+        android:layout_width="264dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="Consumo de água"
+        android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHabitosAlimentares" />
+
+    <Button
+        android:id="@+id/btnHumorDiario"
+        android:layout_width="264dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="#FAFFC2"
+        android:text="Humor diário"
+        android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsumoAgua" />
 
     <TextView
         android:id="@+id/txtNomeUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="4dp"
         android:text="nomeDoUsuario"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTelaInicial1" />
 
-    <Button
-        android:id="@+id/btnExerciciosFisicos"
-        android:layout_width="264dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="71dp"
-        android:backgroundTint="@color/laranjaClaro"
-        android:text="Exercícios físicos"
-        android:textColor="@color/vinho"
+    <TextView
+        android:id="@+id/txtTelaInicial1"
+        android:layout_width="274dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="204dp"
+        android:text="Bem vindo ao Daliy Gaily,"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeUsuario" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btnConta"
-        android:layout_width="63dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="332dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#80ADDDE3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/account" />
