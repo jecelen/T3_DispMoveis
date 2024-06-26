@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tela_adc_refeicao"
-    tools:context=".views.TelaAdcRefeicao">
+    tools:context=".views.TelaEdtAlimentacao">
 
     <EditText
         android:id="@+id/edtDescricaoRefeicao"
@@ -89,4 +89,16 @@
         android:textColor="@color/vinho"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtLocalRefeicao" />
+
+    <ImageButton
+        android:id="@+id/btnExcluirAlimentacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="744dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/edtLocalRefeicao"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

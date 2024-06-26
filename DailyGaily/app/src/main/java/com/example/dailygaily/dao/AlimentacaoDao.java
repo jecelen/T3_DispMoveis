@@ -7,6 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.dailygaily.entities.Alimentacao;
+import com.example.dailygaily.entities.Exercicio;
 
 import java.util.List;
 
@@ -26,4 +27,7 @@ public interface AlimentacaoDao {
 
     @Delete
     void delete(Alimentacao alimentacao);
+
+    @Query("SELECT * FROM Alimentacao WHERE usuarioID = :usuarioID")
+    List<Alimentacao> getAlimentacaoByUsuarioID(int usuarioID);
 }
