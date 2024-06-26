@@ -8,13 +8,30 @@
     tools:context=".views.TelaCadastro">
 
     <EditText
+        android:id="@+id/edtSenhaCadastro"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailCadastro" />
+
+    <EditText
         android:id="@+id/edtNomeCadastro"
         android:layout_width="333dp"
         android:layout_height="45dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="42dp"
         android:ems="10"
+        android:hint="Nome"
         android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,31 +39,40 @@
         android:id="@+id/edtEmailCadastro"
         android:layout_width="333dp"
         android:layout_height="45dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
         android:ems="10"
+        android:hint="E-mail"
         android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNomeCadastro" />
 
-    <EditText
-        android:id="@+id/edtSenhaCadastro"
-        android:layout_width="333dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="53dp"
-        android:ems="10"
-        android:inputType="textPassword"
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="117dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/laranjaClaro"
+        android:onClick="salvarUsuario"
+        android:text="Registrar"
+        android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailCadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro1" />
 
     <TextView
         android:id="@+id/txtTelaCadastro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:text="Já possui conta?"
+        app:layout_constraintEnd_toStartOf="@+id/txtLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
 
@@ -54,23 +80,12 @@
         android:id="@+id/txtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/vinho"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="128dp"
         android:text="Login"
+        android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtTelaCadastro1"
         app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
-
-    <Button
-        android:id="@+id/btnCadastro"
-        android:layout_width="117dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/laranjaClaro"
-        android:onClick="salvarUsuario"
-        android:text="Registrar"
-        android:textColor="@color/vinho"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

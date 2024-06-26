@@ -23,8 +23,8 @@ import com.example.dailygaily.entities.Usuario;
 public class TelaAdcExercicios extends AppCompatActivity {
 
     private LocalDatabase db;
-    private EditText edtTipoExercicio, edtTempoExercicio, edtLatitude, edtLongitude;
-    private Double tempo, lat, lon;
+    private EditText edtTipoExercicio, edtTempoExercicio;
+    private Double tempo;
     private Button btnSalvarExercicio;
     private SharedPreferences sharedPreferences;
     private int dbUsuarioId;
@@ -41,8 +41,6 @@ public class TelaAdcExercicios extends AppCompatActivity {
 
         edtTipoExercicio = findViewById(R.id.edtTipoExercicio);
         edtTempoExercicio = findViewById(R.id.edtTempoExercicio);
-        edtLatitude = findViewById(R.id.edtLatitudeExercicios);
-        edtLongitude = findViewById(R.id.edtLongitudeExercicios);
         btnSalvarExercicio = findViewById(R.id.btnSalvarExercicio);
 
         btnSalvarExercicio.setOnClickListener(new View.OnClickListener() {
@@ -58,16 +56,10 @@ public class TelaAdcExercicios extends AppCompatActivity {
         dbUsuarioId = sharedPreferences.getInt("usuarioId", -1);
         String tipoExercicio = edtTipoExercicio.getText().toString();
         String tempoExercicio = edtTempoExercicio.getText().toString();
-        String latitude = edtLatitude.getText().toString();
-        String longitude = edtLongitude.getText().toString();
         tempo = Double.valueOf(tempoExercicio).doubleValue();
-        lat = Double.valueOf(latitude).doubleValue();
-        lon = Double.valueOf(longitude).doubleValue();
         Exercicio novoExercicio = new Exercicio();
         novoExercicio.setTipoDeExercicio(tipoExercicio);
         novoExercicio.setTempo(tempo);
-        novoExercicio.setLatitude(lat);
-        novoExercicio.setLongitude(lon);
         novoExercicio.setUsuarioID(dbUsuarioId);
 
 

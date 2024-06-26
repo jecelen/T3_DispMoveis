@@ -22,7 +22,7 @@ public class TelaEdtExercicios extends AppCompatActivity {
 
     private Button btnSalvarExercicio;
     private ImageButton btnExcluirExercicio;
-    private TextView edtTipoExercicio, edtTempoExercicio, edtLatitude, edtLongitude;
+    private TextView edtTipoExercicio, edtTempoExercicio;
     private long dbExercicioID;
     private LocalDatabase db;
 
@@ -34,8 +34,6 @@ public class TelaEdtExercicios extends AppCompatActivity {
         setContentView(R.layout.activity_tela_edt_exercicios);
         edtTipoExercicio = findViewById(R.id.edtTipoExercicio);
         edtTempoExercicio = findViewById(R.id.edtTempoExercicio);
-        edtLatitude = findViewById(R.id.edtLatitudeExercicios);
-        edtLongitude = findViewById(R.id.edtLongitudeExercicios);
         btnExcluirExercicio = findViewById(R.id.btnExcluirExercicio);
         btnSalvarExercicio = findViewById(R.id.btnSalvarExercicio);
 
@@ -57,22 +55,19 @@ public class TelaEdtExercicios extends AppCompatActivity {
     }
 
     private void salvarAlteracoes() {
-        // Obtém a cidade do banco de dados pelo ID
+
         ExercicioDao exercicioDao = LocalDatabase.getDatabase(this).exercicioModel();
 
         int exercicioIdInt = (int) dbExercicioID;
 
-        // Obtém a cidade do banco de dados com o ID fornecido
         Exercicio exercicio = exercicioDao.getExercicio(exercicioIdInt);
 
         if (exercicio != null) {
-            // Atualiza os dados da cidade
+
             exercicio.setTipoDeExercicio(edtTipoExercicio.getText().toString());
             exercicio.setTempo(Double.parseDouble(edtTempoExercicio.getText().toString()));
-            exercicio.setLatitude(Double.parseDouble(edtLatitude.getText().toString()));
-            exercicio.setLongitude(Double.parseDouble(edtLongitude.getText().toString()));
 
-            // Atualiza a cidade no banco de dados
+
             exercicioDao.update(exercicio);
 
             Toast.makeText(this, "Alterações salvas com sucesso", Toast.LENGTH_SHORT).show();
@@ -82,18 +77,17 @@ public class TelaEdtExercicios extends AppCompatActivity {
     }
 
     private void excluirExercicio() {
-        // Obtém a cidade do banco de dados pelo ID
+
         ExercicioDao exercicioDao = LocalDatabase.getDatabase(this).exercicioModel();
 
         // Convertendo o long para int
         int exercicioIdInt = (int) dbExercicioID;
 
-        // Obtém a cidade do banco de dados com o ID fornecido
         Exercicio exercicio = exercicioDao.getExercicio(exercicioIdInt);
 
-        // Verifica se o exercicio foi encontrada
+
         if (exercicio != null) {
-            // Exclui a cidade do banco de dados
+
             exercicioDao.delete(exercicio);
             Toast.makeText(this, "Exercício excluído com sucesso", Toast.LENGTH_SHORT).show();
 
@@ -114,8 +108,6 @@ public class TelaEdtExercicios extends AppCompatActivity {
         if (exercicio != null) {
             edtTipoExercicio.setText(exercicio.getTipoDeExercicio());
             edtTempoExercicio.setText(exercicio.getTempo().toString());
-            edtLatitude.setText(Double.toString(exercicio.getLatitude()));
-            edtLongitude.setText(Double.toString(exercicio.getLongitude()));
         } else {
             Toast.makeText(this, "Erro: Exercício não encontrado", Toast.LENGTH_SHORT).show();
             finish();
