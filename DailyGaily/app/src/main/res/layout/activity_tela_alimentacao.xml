@@ -7,6 +7,17 @@
     android:background="@drawable/tela_habitos_alimentares"
     tools:context=".views.TelaAlimentacao">
 
+    <ImageButton
+        android:id="@+id/imgVoltar"
+        android:layout_width="65dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow_foreground" />
+
     <Button
         android:id="@+id/btnAdcRefeicao"
         android:layout_width="239dp"
@@ -23,8 +34,8 @@
         android:id="@+id/listViewAlimentacao"
         android:layout_width="324dp"
         android:layout_height="446dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAdcRefeicao" />
 

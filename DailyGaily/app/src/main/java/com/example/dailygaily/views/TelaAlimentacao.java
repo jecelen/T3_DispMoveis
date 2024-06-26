@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.dailygaily.R;
@@ -28,6 +29,7 @@ public class TelaAlimentacao extends AppCompatActivity {
     private LocalDatabase db;
     private List<Alimentacao> alimentacaos;
     private ListView listViewAlimentacao;
+    private ImageButton imgVoltar;
     private Intent edtIntent;
     private int dbUsuarioId;
     private SharedPreferences sharedPreferences;
@@ -40,11 +42,19 @@ public class TelaAlimentacao extends AppCompatActivity {
         db = LocalDatabase.getDatabase(getApplicationContext());
         listViewAlimentacao = findViewById(R.id.listViewAlimentacao);
         btnAdcRefeicao = findViewById(R.id.btnAdcRefeicao);
+        imgVoltar = findViewById(R.id.imgVoltar);
 
         btnAdcRefeicao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(TelaAlimentacao.this, TelaAdcRefeicao.class);
+                startActivity(it);
+            }
+        });
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(TelaAlimentacao.this, TelaInicial.class);
                 startActivity(it);
             }
         });

@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.dailygaily.R;
@@ -29,6 +30,8 @@ public class TelaExercicios extends AppCompatActivity {
     private int dbUsuarioId;
     private SharedPreferences sharedPreferences;
 
+    private ImageButton imgVoltar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +39,20 @@ public class TelaExercicios extends AppCompatActivity {
         db = LocalDatabase.getDatabase(getApplicationContext());
         listViewExercicios = findViewById(R.id.listViewExercicio);
         btnAdcExercicio = findViewById(R.id.btnAdcExercicio);
+        imgVoltar = findViewById(R.id.imgVoltar);
 
         btnAdcExercicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(TelaExercicios.this, TelaAdcExercicios.class);
+                startActivity(it);
+            }
+        });
+
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(TelaExercicios.this, TelaInicial.class);
                 startActivity(it);
             }
         });
