@@ -41,11 +41,8 @@ public class MapaEndereco extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_mapa_endereco);
 
         // Initialize location data
-        LatLng latLng = obterLocalizacao();
-        if (latLng != null) {
-            lati = latLng.latitude;
-            longi = latLng.longitude;
-        }
+//        LatLng latLng = obterLocalizacao();
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -76,8 +73,10 @@ public class MapaEndereco extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        sharedPreferences = getSharedPreferences("locPref", MODE_PRIVATE);
-        endMarcado = sharedPreferences.getString("endMarcado", "endereço não encontrado.");
+        sharedPreferences = getSharedPreferences("Local", MODE_PRIVATE);
+        endMarcado = sharedPreferences.getString("local", "endereço não encontrado.");
+        lati = sharedPreferences.getFloat("lati", 0);
+        longi = sharedPreferences.getFloat("longi", 0);
         LatLng latLng = new LatLng(lati, longi);
         map.addMarker(new MarkerOptions().position(latLng).title(endMarcado));
         map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
@@ -86,29 +85,29 @@ public class MapaEndereco extends FragmentActivity implements OnMapReadyCallback
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
     }
 
-    private LatLng obterLocalizacao() {
-        sharedPreferences = getSharedPreferences("locPref", MODE_PRIVATE);
-        alimentacaoId = sharedPreferences.getInt("idAlimentacao", -1);
-
-        AlimentacaoDao alimentacaoDao = LocalDatabase.getDatabase(this).alimentacaoModel();
-        Alimentacao alimentacao = alimentacaoDao.getAlimentacao(alimentacaoId);
-
-        // Debug print
-        Log.d(TAG, "Exercício: " + alimentacao);
-
-        if (alimentacao != null) {
-            longi = alimentacao.getLongitude();
-            lati = alimentacao.getLatitude();
-            endMarcado = alimentacao.getNomeDoLocal();
-
-            // Debug prints for latitude and longitude
-            Log.d(TAG, "Longitude: " + longi);
-            Log.d(TAG, "Latitude: " + lati);
-
-            return new LatLng(lati, longi);
-        } else {
-            Toast.makeText(this, "Erro: endereço não encontrado", Toast.LENGTH_SHORT).show();
-            return null;
-        }
-    }
+//    private LatLng obterLocalizacao() {
+//        sharedPreferences = getSharedPreferences("Local", MODE_PRIVATE);
+//        alimentacaoId = sharedPreferences.getInt("id", -1);
+//
+//        AlimentacaoDao alimentacaoDao = LocalDatabase.getDatabase(this).alimentacaoModel();
+//        Alimentacao alimentacao = alimentacaoDao.getAlimentacao(alimentacaoId);
+//
+//        // Debug print
+//        Log.d(TAG, "Exercício: " + alimentacao);
+//
+//        if (alimentacao != null) {
+//            longi = alimentacao.getLongitude();
+//            lati = alimentacao.getLatitude();
+//            endMarcado = alimentacao.getNomeDoLocal();
+//
+//            // Debug prints for latitude and longitude
+//            Log.d(TAG, "Longitude: " + longi);
+//            Log.d(TAG, "Latitude: " + lati);
+//
+//            return new LatLng(lati, longi);
+//        } else {
+//            Toast.makeText(this, "Erro: endereço não encontrado", Toast.LENGTH_SHORT).show();
+//            return null;
+//        }
+//    }
 }
