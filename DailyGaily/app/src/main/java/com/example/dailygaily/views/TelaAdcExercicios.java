@@ -29,6 +29,8 @@ public class TelaAdcExercicios extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private int dbUsuarioId;
 
+    private ImageButton imgVoltar;
+
 
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
@@ -42,11 +44,20 @@ public class TelaAdcExercicios extends AppCompatActivity {
         edtTipoExercicio = findViewById(R.id.edtTipoExercicio);
         edtTempoExercicio = findViewById(R.id.edtTempoExercicio);
         btnSalvarExercicio = findViewById(R.id.btnSalvarExercicio);
+        imgVoltar = findViewById(R.id.imgVoltar);
 
         btnSalvarExercicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 salvarExercicio();
+            }
+        });
+
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(TelaAdcExercicios.this, TelaExercicios.class);
+                startActivity(it);
             }
         });
     }

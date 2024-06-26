@@ -7,6 +7,17 @@
     android:background="@drawable/tela_adc_refeicao"
     tools:context=".views.TelaAdcRefeicao">
 
+    <ImageButton
+        android:id="@+id/imgVoltar"
+        android:layout_width="65dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow_foreground" />
+
     <EditText
         android:id="@+id/edtDescricaoRefeicao"
         android:layout_width="313dp"
