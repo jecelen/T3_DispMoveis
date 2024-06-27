@@ -20,11 +20,11 @@
 
     <EditText
         android:id="@+id/edtTempoExercicio"
-        android:layout_width="282dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="55dp"
+        android:layout_width="297dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Tempo de exercício (minutos)"
         android:inputType="numberDecimal|numberSigned"
@@ -34,11 +34,11 @@
 
     <EditText
         android:id="@+id/edtTipoExercicio"
-        android:layout_width="279dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="55dp"
+        android:layout_width="297dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Tipo do exercício"
         android:inputType="text"
@@ -52,7 +52,7 @@
         android:layout_width="115dp"
         android:layout_height="62dp"
         android:layout_marginStart="240dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="55dp"
         android:backgroundTint="#AEDEE4"
         android:onClick="salvarExercicio"
@@ -68,9 +68,9 @@
         android:id="@+id/fotoExercicio"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="168dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="5dp"
         android:scaleType="centerCrop"
         android:src="@drawable/baseline_insert_photo_24"
         app:layout_constraintEnd_toStartOf="@+id/btn_adcfoto"
@@ -84,7 +84,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="248dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="56dp"
         android:backgroundTint="#AEDEE4"
         android:text="Adicionar foto"
@@ -93,6 +93,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fotoExercicio"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintVertical_bias="0.769" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

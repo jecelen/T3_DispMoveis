@@ -7,60 +7,45 @@
     android:background="@drawable/tela_adc_agua"
     tools:context=".views.TelaAdcAgua">
 
-    <TextView
-        android:id="@+id/txtAdcAgua1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="333dp"
-        android:inputType="number"
-        android:text="Ml's consumidos"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtAdcAgua2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="84dp"
-        android:text="Horário"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAdcAgua1" />
-
     <EditText
         android:id="@+id/edtMlConsumido"
         android:layout_width="304dp"
         android:layout_height="47dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
+        android:hint="Total consumido (ml)"
         android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAdcAgua1" />
+        tools:layout_editor_absoluteY="288dp" />
 
     <EditText
         android:id="@+id/editTextTime"
         android:layout_width="304dp"
         android:layout_height="47dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
+        android:hint="Horário"
         android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAdcAgua2" />
+        tools:layout_editor_absoluteY="368dp" />
 
     <Button
         android:id="@+id/btnSalvarConsumo"
         android:layout_width="134dp"
         android:layout_height="48dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="48dp"
         android:backgroundTint="@color/azulClaro"
         android:text="Salvar"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 

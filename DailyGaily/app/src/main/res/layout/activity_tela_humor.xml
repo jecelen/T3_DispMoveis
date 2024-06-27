@@ -22,8 +22,10 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="208dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/humor_ruim" />
@@ -32,8 +34,10 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="208dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/humor_medio_ruim" />
@@ -42,8 +46,10 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="208dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/humor_bom" />
@@ -52,8 +58,10 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="208dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/humor_medio_bom" />
@@ -64,19 +72,24 @@
         android:layout_height="54dp"
         android:layout_marginStart="116dp"
         android:layout_marginTop="96dp"
+        android:layout_marginEnd="116dp"
         android:backgroundTint="@color/laranjaClaro"
         android:text="Registrar humor"
         android:textColor="@color/vinho"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHumores" />
 
     <RadioGroup
         android:id="@+id/btnHumores"
-        android:layout_width="478dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="366dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
@@ -84,27 +97,53 @@
             android:id="@+id/btnRuim"
             android:layout_width="32dp"
             android:layout_height="28dp"
-            android:layout_marginLeft="17dp" />
+            android:layout_marginLeft="25dp" />
 
         <RadioButton
             android:id="@+id/btnMedioRuim"
             android:layout_width="32dp"
             android:layout_height="28dp"
-            android:layout_marginLeft="73dp" />
+            android:layout_marginLeft="55dp" />
 
         <RadioButton
             android:id="@+id/btnMedioBom"
             android:layout_width="32dp"
             android:layout_height="28dp"
-            android:layout_marginLeft="75dp" />
+            android:layout_marginLeft="60dp" />
 
         <RadioButton
             android:id="@+id/btnBom"
             android:layout_width="32dp"
             android:layout_height="28dp"
-            android:layout_marginLeft="74dp" />
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center" />
 
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="91dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/baseline_insert_photo_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="111dp"
+        android:text="Seu último humor cadastrado:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarHumor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

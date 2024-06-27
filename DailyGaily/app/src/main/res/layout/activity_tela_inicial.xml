@@ -40,7 +40,7 @@
         android:layout_width="264dp"
         android:layout_height="74dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="72dp"
         android:backgroundTint="@color/laranjaClaro"
         android:text="Exercícios físicos"
