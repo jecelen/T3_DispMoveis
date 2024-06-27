@@ -70,13 +70,13 @@
             android:name=".views.TelaHumor"
             android:exported="false" />
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.TelaInicial"
             android:exported="false" />
         <activity
             android:name=".views.TelaCadastro"
             android:exported="false" />
         <activity
-            android:name=".views.TelaInicial"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
