@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ public class TelaHumor extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private int dbUsuarioId;
     private LocalDatabase db;
+    private ImageButton imgVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,15 @@ public class TelaHumor extends AppCompatActivity {
         radioGroupHumores = findViewById(R.id.btnHumores);
         btnRegistrarHumor = findViewById(R.id.btnRegistrarHumor);
         db = LocalDatabase.getDatabase(getApplicationContext());
+        imgVoltar = findViewById(R.id.imgVoltar);
+
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(TelaHumor.this, TelaInicial.class);
+                startActivity(it);
+            }
+        });
 
         btnRegistrarHumor.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NonConstantResourceId")
@@ -65,6 +76,7 @@ public class TelaHumor extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void salvarHumor(String selectedText) {

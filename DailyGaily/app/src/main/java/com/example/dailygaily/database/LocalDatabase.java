@@ -17,7 +17,7 @@ import com.example.dailygaily.entities.Exercicio;
 import com.example.dailygaily.entities.Humor;
 import com.example.dailygaily.entities.Usuario;
 
-@Database(entities = {Usuario.class, Exercicio.class, Alimentacao.class, Humor.class, ConsumoDeAgua.class}, version = 9)
+@Database(entities = {Usuario.class, Exercicio.class, Alimentacao.class, Humor.class, ConsumoDeAgua.class}, version = 10)
 public abstract class LocalDatabase extends RoomDatabase {
     private static LocalDatabase INSTANCE;
 
