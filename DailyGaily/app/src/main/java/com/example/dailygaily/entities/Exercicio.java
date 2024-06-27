@@ -15,6 +15,7 @@ public class Exercicio {
     private String tipoDeExercicio;
     private Double tempo;
     private int usuarioID;
+    private String fotoUri;
 
     public Exercicio() {
     }
@@ -55,6 +56,13 @@ public class Exercicio {
 
     public void setUsuarioID(int usuarioID) {
         this.usuarioID = usuarioID;
+    }
+    public String getFotoUri() {
+        return fotoUri;
+    }
+
+    public void setFotoUri(String fotoUri) {
+        this.fotoUri = fotoUri;
     }
 
     @Override
