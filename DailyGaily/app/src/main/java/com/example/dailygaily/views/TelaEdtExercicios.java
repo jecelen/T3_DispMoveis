@@ -114,7 +114,6 @@ public class TelaEdtExercicios extends AppCompatActivity {
             edtTipoExercicio.setText(exercicio.getTipoDeExercicio());
             edtTempoExercicio.setText(exercicio.getTempo().toString());
 
-            // Load image if available
             if (exercicio.getFotoUri() != null) {
                 Uri photoURI = Uri.parse(exercicio.getFotoUri());
                 Log.d("TelaEdtExercicios", "URI da foto: " + photoURI.toString());

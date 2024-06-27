@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/edtTipoExercicio"
+        android:textColor="@android:color/black"
         android:layout_width="309dp"
         android:layout_height="47dp"
         android:layout_marginStart="48dp"
@@ -24,6 +25,7 @@
 
     <EditText
         android:id="@+id/edtTempoExercicio"
+        android:textColor="@color/black"
         android:layout_width="309dp"
         android:layout_height="45dp"
         android:layout_marginStart="48dp"
