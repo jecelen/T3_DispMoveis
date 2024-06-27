@@ -8,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 
 import com.example.dailygaily.R;
+import com.example.dailygaily.views.TelaTarefa;
 
+import java.util.Date;
 import java.util.List;
 
 public class CheckboxAdapter extends BaseAdapter {
@@ -52,6 +54,7 @@ public class CheckboxAdapter extends BaseAdapter {
             public void onClick(View v) {
                 if (onEditTaskListener != null) {
                     onEditTaskListener.onEditTask(position);
+
                 }
             }
         });
@@ -77,4 +80,5 @@ public class CheckboxAdapter extends BaseAdapter {
     public interface OnEditTaskListener {
         void onEditTask(int position);
     }
+
 }

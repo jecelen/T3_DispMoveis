@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DailyGaily</string>
+    <string name="channel_name">Notificações de Tarefas</string>
+    <string name="channel_description">Alertas e lembretes para suas tarefas programadas</string>
 </resources>
