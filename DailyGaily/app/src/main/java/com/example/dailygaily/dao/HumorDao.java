@@ -27,4 +27,7 @@ public interface HumorDao {
 
     @Delete
     void delete(Humor humor);
+
+    @Query("SELECT * FROM Humor ORDER BY humorID DESC LIMIT 1")
+    Humor getLastHumor();
 }

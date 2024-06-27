@@ -13,9 +13,11 @@
         android:layout_height="57dp"
         android:layout_marginStart="86dp"
         android:layout_marginTop="174dp"
-        android:backgroundTint="#F29999"
-        android:textColor="@color/vinho"
+        android:layout_marginEnd="86dp"
+        android:backgroundTint="#EC9792"
         android:text="Adicionar Tarefa"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +27,8 @@
         android:layout_height="488dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAdcTarefa" />
 
