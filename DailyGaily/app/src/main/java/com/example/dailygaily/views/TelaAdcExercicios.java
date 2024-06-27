@@ -209,6 +209,7 @@ public class TelaAdcExercicios extends AppCompatActivity {
         novoExercicio.setUsuarioID(dbUsuarioId);
         if (photoURI != null) {
             novoExercicio.setFotoUri(photoURI.toString());
+            Log.d("SalvarExercicio", "Foto URI salva: " + photoURI.toString());
         }
 
         db.exercicioModel().insertAll(novoExercicio);

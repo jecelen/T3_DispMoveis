@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.dailygaily.R;
 import com.example.dailygaily.dao.ExercicioDao;
 import com.example.dailygaily.database.LocalDatabase;
@@ -116,7 +117,10 @@ public class TelaEdtExercicios extends AppCompatActivity {
             // Load image if available
             if (exercicio.getFotoUri() != null) {
                 Uri photoURI = Uri.parse(exercicio.getFotoUri());
-                fotoExercicioEdt.setImageURI(photoURI);
+                Log.d("TelaEdtExercicios", "URI da foto: " + photoURI.toString());
+                Glide.with(this)
+                        .load(photoURI)
+                        .into(fotoExercicioEdt);
             }
         } else {
             Toast.makeText(this, "Erro: Exercício não encontrado", Toast.LENGTH_SHORT).show();
