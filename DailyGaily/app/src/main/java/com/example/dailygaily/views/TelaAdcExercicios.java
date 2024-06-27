@@ -1,10 +1,13 @@
 package com.example.dailygaily.views;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
+
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -136,7 +139,17 @@ public class TelaAdcExercicios extends AppCompatActivity {
                         "com.example.dailygaily.fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
+                        new ActivityResultContracts.StartActivityForResult(),
+                        result -> {
+                            if (result.getResultCode() == RESULT_OK) {
+                                if (result.getData() != null) {
+                                    onActivityResult(REQUEST_IMAGE_CAPTURE, RESULT_OK, result.getData());
+                                }
+                            }
+                        });
+
+                someActivityResultLauncher.launch(takePictureIntent);
             } else {
                 Toast.makeText(this, "Não foi possível criar o arquivo da imagem.", Toast.LENGTH_SHORT).show();
             }

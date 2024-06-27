@@ -12,14 +12,15 @@
         android:layout_width="309dp"
         android:layout_height="47dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="57dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Tipo do exercício"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/fotoExercicioEdt" />
 
     <EditText
         android:id="@+id/edtTempoExercicio"
@@ -40,7 +41,7 @@
         android:layout_width="134dp"
         android:layout_height="58dp"
         android:layout_marginStart="216dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="48dp"
         android:backgroundTint="#AEDEE4"
         android:onClick="salvarExercicio"
@@ -63,5 +64,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/delete" />
+
+    <ImageView
+        android:id="@+id/fotoExercicioEdt"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="111dp"
+        android:src="@drawable/baseline_insert_photo_24"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluirExercicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

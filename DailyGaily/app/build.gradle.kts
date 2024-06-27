@@ -41,4 +41,5 @@ dependencies {
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("androidx.core:core:1.7.0")
+    implementation ("androidx.activity:activity:1.4.0")
 }
